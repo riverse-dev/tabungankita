@@ -20,6 +20,7 @@
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -70,8 +71,13 @@
     }
 
     @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     /* Prevent text selection */
@@ -91,13 +97,13 @@
 
   <script src="flutter_bootstrap.js" async></script>
   <script>
-    window.addEventListener('load', function(ev) {
+    window.addEventListener('load', function (ev) {
       // Remove loading indicator after flutter is loaded
-      var checkExist = setInterval(function() {
-         if (document.querySelector('flt-glass-pane')) {
-            document.getElementById('loading-indicator').remove();
-            clearInterval(checkExist);
-         }
+      var checkExist = setInterval(function () {
+        if (document.querySelector('flt-glass-pane')) {
+          document.getElementById('loading-indicator').remove();
+          clearInterval(checkExist);
+        }
       }, 100);
     });
   </script>
